@@ -1,0 +1,59 @@
+//
+//  BaiduMap_IOSSDKDemo-Prefix.pch
+//  BaiduMap_IOSSDKDemo
+//
+//  Created by devzkn on 07/10/2016.
+//  Copyright © 2016 DevKevin. All rights reserved.
+//
+
+#ifndef BaiduMap_IOSSDKDemo_Prefix_pch
+#define BaiduMap_IOSSDKDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__//里面定义的或者引用的东西，只能.m .mm文件使用
+
+#import <UIKit/UIKit.h>
+
+#import <Foundation/Foundation.h>
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>//引入周边雷达功能所有的头文件
+
+#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
+
+
+#define KMainScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KMainScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+
+//调试模式
+#ifdef DEBUG
+
+#define NSLong(...)     NSLog(__VA_ARGS__)
+
+#else//发布模式
+
+#define NSLong(...)
+
+#endif/* DEBUG */
+
+
+
+
+
+#endif /*  __OBJC__/*/
+
+
+#endif /* BaiduMap_IOSSDKDemo_Prefix_pch */
